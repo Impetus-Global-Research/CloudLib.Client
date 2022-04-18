@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Win\\CloudLib.Client.Win\\CloudLib.Client.Win (Package)\\CloudLib.Client.Win (Package).wapproj": {}
+  },
+  "projects": {
+    "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Win\\CloudLib.Client.Win\\CloudLib.Client.Win (Package)\\CloudLib.Client.Win (Package).wapproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Win\\CloudLib.Client.Win\\CloudLib.Client.Win (Package)\\CloudLib.Client.Win (Package).wapproj",
+        "projectName": "CloudLib.Client.Win (Package)",
+        "projectPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Win\\CloudLib.Client.Win\\CloudLib.Client.Win (Package)\\CloudLib.Client.Win (Package).wapproj",
+        "packagesPath": "C:\\Users\\chapm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Win\\CloudLib.Client.Win\\CloudLib.Client.Win (Package)\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\chapm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "uap10.0.19041"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "uap10.0.19041": {
+            "targetAlias": "net451",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "uap10.0.19041": {
+          "targetAlias": "net451",
+          "dependencies": {
+            "Microsoft.WindowsAppSDK": {
+              "include": "Build",
+              "target": "Package",
+              "version": "[1.0.0-experimental1, 1.0.0-experimental1]"
+            },
+            "Microsoft.WindowsAppSDK.WinUI": {
+              "include": "Build",
+              "target": "Package",
+              "version": "[1.0.0-experimental1, 1.0.0-experimental1]"
+            }
+          },
+          "imports": [
+            "net5.0-windows10.0.22000",
+            "netcoreapp3.1",
+            "netcoreapp3.0",
+            "netcoreapp2.0",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net6.0-windows10.0.22000",
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win10-arm": {
+          "#import": []
+        },
+        "win10-arm-aot": {
+          "#import": []
+        },
+        "win10-arm64-aot": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        },
+        "win10-x64-aot": {
+          "#import": []
+        },
+        "win10-x86": {
+          "#import": []
+        },
+        "win10-x86-aot": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

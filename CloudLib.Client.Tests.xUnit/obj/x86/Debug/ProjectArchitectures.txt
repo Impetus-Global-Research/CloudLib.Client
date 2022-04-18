@@ -1,0 +1,2 @@
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client.Tests.xUnit\CloudLib.Client.Tests.xUnit.csproj;x86
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client\CloudLib.Client.csproj;x86

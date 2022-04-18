@@ -1,0 +1,1 @@
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client\CloudLib.Client.csproj;x86

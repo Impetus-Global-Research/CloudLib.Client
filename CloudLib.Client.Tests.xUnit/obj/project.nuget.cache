@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "dgSpecHash": "4xXOmey2jRoVgtcOrcf10MRMtjn2JeW4Fj3p1sKMO7biJwcfCEs4vaUb9Xv3u4I39cWaHLWOrWpdrtVpU6Fhpg==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Tests.xUnit\\CloudLib.Client.Tests.xUnit.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project CloudLib.Client is not compatible with net40 (.NETFramework,Version=v4.0). Project CloudLib.Client supports: uap10.0.19041 (UAP,Version=v10.0.19041)",
+      "libraryId": "CloudLib.Client",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.0"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project CloudLib.Client is not compatible with net40 (.NETFramework,Version=v4.0) / win. Project CloudLib.Client supports: uap10.0.19041 (UAP,Version=v10.0.19041)",
+      "libraryId": "CloudLib.Client",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.0/win"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project CloudLib.Client is not compatible with net40 (.NETFramework,Version=v4.0) / win-x64. Project CloudLib.Client supports: uap10.0.19041 (UAP,Version=v10.0.19041)",
+      "libraryId": "CloudLib.Client",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.0/win-x64"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project CloudLib.Client is not compatible with net40 (.NETFramework,Version=v4.0) / win-x86. Project CloudLib.Client supports: uap10.0.19041 (UAP,Version=v10.0.19041)",
+      "libraryId": "CloudLib.Client",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.0/win-x86"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Tests.xUnit\\CloudLib.Client.Tests.xUnit.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Core\\CloudLib.Client.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Core\\CloudLib.Client.Core.csproj",
+        "projectName": "CloudLib.Client.Core",
+        "projectPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Core\\CloudLib.Client.Core.csproj",
+        "packagesPath": "C:\\Users\\chapm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\chapm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AWSSDK.CognitoIdentity": {
+              "target": "Package",
+              "version": "[3.7.0.145, )"
+            },
+            "AWSSDK.CognitoIdentityProvider": {
+              "target": "Package",
+              "version": "[3.7.2.9, )"
+            },
+            "Amazon.Extensions.CognitoAuthentication": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.43.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[7.0.0-preview.2.22152.2, )"
+            },
+            "System.Net.NetworkInformation": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Tests.xUnit\\CloudLib.Client.Tests.xUnit.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Tests.xUnit\\CloudLib.Client.Tests.xUnit.csproj",
+        "projectName": "CloudLib.Client.Tests.xUnit",
+        "projectPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Tests.xUnit\\CloudLib.Client.Tests.xUnit.csproj",
+        "packagesPath": "C:\\Users\\chapm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Tests.xUnit\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\chapm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net40"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40": {
+            "targetAlias": "net6.0-windows10.0.22000.0",
+            "projectReferences": {
+              "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client\\CloudLib.Client.csproj": {
+                "projectPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client\\CloudLib.Client.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net40": {
+          "targetAlias": "net6.0-windows10.0.22000.0"
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.UI\\CloudLib.Client.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.UI\\CloudLib.Client.UI.csproj",
+        "projectName": "CloudLib.Client.UI",
+        "projectPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.UI\\CloudLib.Client.UI.csproj",
+        "packagesPath": "C:\\Users\\chapm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\chapm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "uap10.0.19041"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "uap10.0.19041": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "uap10.0.19041": {
+          "dependencies": {
+            "Microsoft.NETCore.UniversalWindowsPlatform": {
+              "target": "Package",
+              "version": "[6.2.13, )"
+            },
+            "Microsoft.Toolkit.Uwp.UI": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "Microsoft.Toolkit.Uwp.UI.Controls": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "Microsoft.WindowsAppSDK": {
+              "target": "Package",
+              "version": "[1.0.0-experimental1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win10-arm": {
+          "#import": []
+        },
+        "win10-arm-aot": {
+          "#import": []
+        },
+        "win10-arm64-aot": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        },
+        "win10-x64-aot": {
+          "#import": []
+        },
+        "win10-x86": {
+          "#import": []
+        },
+        "win10-x86-aot": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client\\CloudLib.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client\\CloudLib.Client.csproj",
+        "projectName": "CloudLib.Client",
+        "projectPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client\\CloudLib.Client.csproj",
+        "packagesPath": "C:\\Users\\chapm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\chapm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "uap10.0.19041"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "uap10.0.19041": {
+            "projectReferences": {
+              "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Core\\CloudLib.Client.Core.csproj": {
+                "projectPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Core\\CloudLib.Client.Core.csproj"
+              },
+              "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.UI\\CloudLib.Client.UI.csproj": {
+                "projectPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.UI\\CloudLib.Client.UI.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "uap10.0.19041": {
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win10-arm": {
+          "#import": []
+        },
+        "win10-arm-aot": {
+          "#import": []
+        },
+        "win10-arm64-aot": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        },
+        "win10-x64-aot": {
+          "#import": []
+        },
+        "win10-x86": {
+          "#import": []
+        },
+        "win10-x86-aot": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

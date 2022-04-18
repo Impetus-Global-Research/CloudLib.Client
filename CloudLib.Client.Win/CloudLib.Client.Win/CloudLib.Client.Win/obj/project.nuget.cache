@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "brUnQlZb77xFkN3TF/JQrn68Inz/mA9u6r7wXDDyHU2+7vgAg7rqSC2MFT53pXlMh7Gk7nJEZFjQY6mcPMfPRA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Win\\CloudLib.Client.Win\\CloudLib.Client.Win\\CloudLib.Client.Win.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.windowsappsdk\\1.0.0-experimental1\\microsoft.windowsappsdk.1.0.0-experimental1.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.windowsappsdk.dwrite\\1.0.0-experimental1\\microsoft.windowsappsdk.dwrite.1.0.0-experimental1.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.windowsappsdk.foundation\\1.0.0-experimental1\\microsoft.windowsappsdk.foundation.1.0.0-experimental1.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.windowsappsdk.interactiveexperiences\\1.0.0-experimental1\\microsoft.windowsappsdk.interactiveexperiences.1.0.0-experimental1.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.windowsappsdk.winui\\1.0.0-experimental1\\microsoft.windowsappsdk.winui.1.0.0-experimental1.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\5.0.16\\microsoft.netcore.app.runtime.win-x64.5.0.16.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.netcore.app.host.win-arm64\\5.0.16\\microsoft.netcore.app.host.win-arm64.5.0.16.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\5.0.16\\microsoft.aspnetcore.app.runtime.win-x64.5.0.16.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\5.0.16\\microsoft.netcore.app.runtime.win-arm64.5.0.16.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\5.0.16\\microsoft.windowsdesktop.app.runtime.win-x64.5.0.16.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.24\\microsoft.windows.sdk.net.ref.10.0.19041.24.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\5.0.16\\microsoft.aspnetcore.app.runtime.win-arm64.5.0.16.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\5.0.16\\microsoft.netcore.app.runtime.win-x86.5.0.16.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\5.0.16\\microsoft.windowsdesktop.app.runtime.win-arm64.5.0.16.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\5.0.16\\microsoft.aspnetcore.app.runtime.win-x86.5.0.16.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\5.0.16\\microsoft.windowsdesktop.app.runtime.win-x86.5.0.16.nupkg.sha512",
+    "C:\\Users\\chapm\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\5.0.16\\microsoft.netcore.app.host.win-x86.5.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

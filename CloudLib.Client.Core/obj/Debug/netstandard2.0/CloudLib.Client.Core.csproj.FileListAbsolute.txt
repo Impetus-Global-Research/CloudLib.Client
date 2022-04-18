@@ -1,0 +1,10 @@
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client.Core\bin\Debug\netstandard2.0\CloudLib.Client.Core.deps.json
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client.Core\bin\Debug\netstandard2.0\CloudLib.Client.Core.dll
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client.Core\bin\Debug\netstandard2.0\CloudLib.Client.Core.pdb
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client.Core\obj\Debug\netstandard2.0\CloudLib.Client.Core.csproj.AssemblyReference.cache
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client.Core\obj\Debug\netstandard2.0\CloudLib.Client.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client.Core\obj\Debug\netstandard2.0\CloudLib.Client.Core.AssemblyInfoInputs.cache
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client.Core\obj\Debug\netstandard2.0\CloudLib.Client.Core.AssemblyInfo.cs
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client.Core\obj\Debug\netstandard2.0\CloudLib.Client.Core.csproj.CoreCompileInputs.cache
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client.Core\obj\Debug\netstandard2.0\CloudLib.Client.Core.dll
+C:\Users\chapm\source\repos\CloudLib.Client\CloudLib.Client.Core\obj\Debug\netstandard2.0\CloudLib.Client.Core.pdb

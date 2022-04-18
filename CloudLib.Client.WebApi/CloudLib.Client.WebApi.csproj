@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<Platforms>AnyCPU;x64</Platforms>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\CloudLib.Client.Core\CloudLib.Client.Core.csproj" />
+	</ItemGroup>
+
+</Project>
