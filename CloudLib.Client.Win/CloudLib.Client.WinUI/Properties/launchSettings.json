@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CloudLib.Client.WinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "CloudLib.Client.WinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

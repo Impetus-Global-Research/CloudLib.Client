@@ -13,10 +13,10 @@
     <SourceRoot Include="C:\Users\chapm\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\chapm\.nuget\packages\awssdk.core\3.7.10.5</PkgAWSSDK_Core>
-    <PkgAWSSDK_SecurityToken Condition=" '$(PkgAWSSDK_SecurityToken)' == '' ">C:\Users\chapm\.nuget\packages\awssdk.securitytoken\3.7.1.137</PkgAWSSDK_SecurityToken>
-    <PkgAWSSDK_CognitoIdentityProvider Condition=" '$(PkgAWSSDK_CognitoIdentityProvider)' == '' ">C:\Users\chapm\.nuget\packages\awssdk.cognitoidentityprovider\3.7.2.9</PkgAWSSDK_CognitoIdentityProvider>
-    <PkgAWSSDK_CognitoIdentity Condition=" '$(PkgAWSSDK_CognitoIdentity)' == '' ">C:\Users\chapm\.nuget\packages\awssdk.cognitoidentity\3.7.0.145</PkgAWSSDK_CognitoIdentity>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\chapm\.nuget\packages\awssdk.core\3.7.10.8</PkgAWSSDK_Core>
+    <PkgAWSSDK_SecurityToken Condition=" '$(PkgAWSSDK_SecurityToken)' == '' ">C:\Users\chapm\.nuget\packages\awssdk.securitytoken\3.7.1.140</PkgAWSSDK_SecurityToken>
+    <PkgAWSSDK_CognitoIdentityProvider Condition=" '$(PkgAWSSDK_CognitoIdentityProvider)' == '' ">C:\Users\chapm\.nuget\packages\awssdk.cognitoidentityprovider\3.7.2.12</PkgAWSSDK_CognitoIdentityProvider>
+    <PkgAWSSDK_CognitoIdentity Condition=" '$(PkgAWSSDK_CognitoIdentity)' == '' ">C:\Users\chapm\.nuget\packages\awssdk.cognitoidentity\3.7.0.148</PkgAWSSDK_CognitoIdentity>
   </PropertyGroup>
 </Project>
