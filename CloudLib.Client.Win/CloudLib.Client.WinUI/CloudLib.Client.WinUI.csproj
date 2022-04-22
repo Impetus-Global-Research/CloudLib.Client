@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
 		<TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
@@ -10,9 +10,15 @@
 		<PublishProfile>win10-$(Platform).pubxml</PublishProfile>
 		<UseWinUI>true</UseWinUI>
 		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
 	<ItemGroup>
-	  <None Remove="Styles\_Thickness.xaml" />
+		<None Remove="Styles\_Thickness.xaml" />
+		<None Remove="Views\MainPage.xaml" />
+		<None Remove="Views\ShellPage.xaml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Remove="Views\SchemeActivationSamplePage.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -27,8 +33,10 @@
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview3" />
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
-		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22000.194" />
+		<PackageReference Include="CommunityToolkit.WinUI.UI" Version="7.1.2" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.3" />
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22598-preview" />
+		<PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.0.8" />
 		<Manifest Include="$(ApplicationManifest)" />
 	</ItemGroup>
 
@@ -42,7 +50,22 @@
 		<ProjectReference Include="..\..\CloudLib.Client.WinUI.Core\CloudLib.Client.WinUI.Core.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Page Update="Styles\_Thickness.xaml">
+	  <None Update="Views\SchemeActivationSamplePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Update="Views\MainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
+	</ItemGroup>
+	<ItemGroup>
+		<Page Update="Styles\_Thickness.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Update="Views\ShellPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </Page>
 	</ItemGroup>

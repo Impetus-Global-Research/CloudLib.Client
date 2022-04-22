@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Input;
+using Windows.System;
 using CloudLib.Client.WinUI.Core.Helpers;
 using CloudLib.Client.WinUI.Core.Services;
 using CloudLib.Client.WinUI.Services;
@@ -12,8 +14,8 @@ namespace CloudLib.Client.WinUI.ViewModels
 {
     public class ShellViewModel : ObservableObject
     {
-        //private readonly KeyboardAccelerator _altLeftKeyboardAccelerator = BuildKeyboardAccelerator(VirtualKey.Left, VirtualKeyModifiers.Menu);
-        //private readonly KeyboardAccelerator _backKeyboardAccelerator = BuildKeyboardAccelerator(VirtualKey.GoBack);
+        private readonly KeyboardAccelerator _altLeftKeyboardAccelerator = BuildKeyboardAccelerator(VirtualKey.Left, VirtualKeyModifiers.Menu);
+        private readonly KeyboardAccelerator _backKeyboardAccelerator = BuildKeyboardAccelerator(VirtualKey.GoBack);
 
         private bool _isBackEnabled;
         private IList<KeyboardAccelerator> _keyboardAccelerators;
@@ -43,7 +45,7 @@ namespace CloudLib.Client.WinUI.ViewModels
             set { SetProperty(ref _selected, value); }
         }
 
-        //public ICommand LoadedCommand => _loadedCommand ?? (_loadedCommand = new RelayCommand(OnLoaded));
+        public ICommand LoadedCommand => _loadedCommand ?? (_loadedCommand = new RelayCommand(OnLoaded));
 
         //public ICommand ItemInvokedCommand => _itemInvokedCommand ?? (_itemInvokedCommand = new RelayCommand<WinUI.NavigationViewItemInvokedEventArgs>(OnItemInvoked));
 
@@ -94,16 +96,16 @@ namespace CloudLib.Client.WinUI.ViewModels
         //    UserDataService.UserDataUpdated += OnUserDataUpdated;
         //}
 
-        //private async void OnLoaded()
-        //{
-        //    // Keyboard accelerators are added here to avoid showing 'Alt + left' tooltip on the page.
-        //    // More info on tracking issue https://github.com/Microsoft/microsoft-ui-xaml/issues/8
-        //    _keyboardAccelerators.Add(_altLeftKeyboardAccelerator);
-        //    _keyboardAccelerators.Add(_backKeyboardAccelerator);
-        //    IsLoggedIn = IdentityService.IsLoggedIn();
-        //    IsAuthorized = IsLoggedIn && IdentityService.IsAuthorized();
-        //    User = await UserDataService.GetUserAsync();
-        //}
+        private async void OnLoaded()
+        {
+            // Keyboard accelerators are added here to avoid showing 'Alt + left' tooltip on the page.
+            // More info on tracking issue https://github.com/Microsoft/microsoft-ui-xaml/issues/8
+            _keyboardAccelerators.Add(_altLeftKeyboardAccelerator);
+            _keyboardAccelerators.Add(_backKeyboardAccelerator);
+            IsLoggedIn = IdentityService.IsLoggedIn();
+            IsAuthorized = IsLoggedIn && IdentityService.IsAuthorized();
+            User = await UserDataService.GetUserAsync();
+        }
 
         //private void OnUserDataUpdated(object sender, UserViewModel userData)
         //{
@@ -230,22 +232,24 @@ namespace CloudLib.Client.WinUI.ViewModels
         //    return pageType == sourcePageType;
         //}
 
-        //private static KeyboardAccelerator BuildKeyboardAccelerator(VirtualKey key, VirtualKeyModifiers? modifiers = null)
-        //{
-        //    var keyboardAccelerator = new KeyboardAccelerator { Key = key };
-        //    if (modifiers.HasValue)
-        //    {
-        //        keyboardAccelerator.Modifiers = modifiers.Value;
-        //    }
+        private static KeyboardAccelerator BuildKeyboardAccelerator(VirtualKey key, VirtualKeyModifiers? modifiers = null)
+        {
+            var keyboardAccelerator = new KeyboardAccelerator { Key = key };
+            if (modifiers.HasValue)
+            {
+                keyboardAccelerator.Modifiers = modifiers.Value;
+            }
 
-        //    keyboardAccelerator.Invoked += OnKeyboardAcceleratorInvoked;
-        //    return keyboardAccelerator;
-        //}
+            keyboardAccelerator.Invoked += OnKeyboardAcceleratorInvoked;
+            return keyboardAccelerator;
+        }
 
-        //private static void OnKeyboardAcceleratorInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
-        //{
-        //    var result = NavigationService.GoBack();
-        //    args.Handled = result;
-        //}
+        private static void OnKeyboardAcceleratorInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
+        {
+            //TODO: Handle Keyboard accelerator invoked event
+            throw new NotImplementedException();
+            //var result = NavigationService.GoBack();
+            //args.Handled = result;
+        }
     }
 }
