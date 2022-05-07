@@ -74,12 +74,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-preview.2.22153.17\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -92,6 +98,7 @@
         "packagesPath": "C:\\Users\\chapm\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\chapm\\source\\repos\\CloudLib.Client\\CloudLib.Client.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -101,7 +108,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -109,8 +116,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -121,16 +128,16 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "AWSSDK.CognitoIdentity": {
               "target": "Package",
-              "version": "[3.7.0.145, )"
+              "version": "[3.7.0.148, )"
             },
             "AWSSDK.CognitoIdentityProvider": {
               "target": "Package",
-              "version": "[3.7.2.9, )"
+              "version": "[3.7.2.12, )"
             },
             "Amazon.Extensions.CognitoAuthentication": {
               "target": "Package",
@@ -138,7 +145,7 @@
             },
             "Microsoft.Identity.Client": {
               "target": "Package",
-              "version": "[4.43.0, )"
+              "version": "[4.43.1, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -146,7 +153,7 @@
             },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
-              "version": "[7.0.0-preview.2.22152.2, )"
+              "version": "[7.0.0-preview.3.22175.4, )"
             },
             "System.Net.NetworkInformation": {
               "target": "Package",
@@ -164,11 +171,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
+            "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-preview.2.22153.17\\RuntimeIdentifierGraph.json"
         }
       }
     }

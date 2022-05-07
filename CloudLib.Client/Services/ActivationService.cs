@@ -43,7 +43,7 @@ namespace CloudLib.Client.Services
                 await InitializeAsync();
                 UserDataService.Initialize();
                 //IdentityService.InitializeWithAadAndPersonalMsAccounts();
-                //await IdentityService.AcquireTokenSilentAsync();
+                /the /await IdentityService.AcquireTokenSilentAsync();
 
                 // Do not repeat app initialization when the Window already has content,
                 // just ensure that the window is active

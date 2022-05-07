@@ -15,11 +15,11 @@
           "lib/netstandard2.0/Amazon.Extensions.CognitoAuthentication.dll": {}
         }
       },
-      "AWSSDK.CognitoIdentity/3.7.0.145": {
+      "AWSSDK.CognitoIdentity/3.7.0.148": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.10.5, 4.0.0)",
-          "AWSSDK.SecurityToken": "[3.7.1.137, 4.0.0)"
+          "AWSSDK.Core": "[3.7.10.8, 4.0.0)",
+          "AWSSDK.SecurityToken": "[3.7.1.140, 4.0.0)"
         },
         "compile": {
           "lib/netcoreapp3.1/AWSSDK.CognitoIdentity.dll": {}
@@ -28,10 +28,10 @@
           "lib/netcoreapp3.1/AWSSDK.CognitoIdentity.dll": {}
         }
       },
-      "AWSSDK.CognitoIdentityProvider/3.7.2.9": {
+      "AWSSDK.CognitoIdentityProvider/3.7.2.12": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.10.5, 4.0.0)"
+          "AWSSDK.Core": "[3.7.10.8, 4.0.0)"
         },
         "compile": {
           "lib/netcoreapp3.1/AWSSDK.CognitoIdentityProvider.dll": {}
@@ -40,7 +40,7 @@
           "lib/netcoreapp3.1/AWSSDK.CognitoIdentityProvider.dll": {}
         }
       },
-      "AWSSDK.Core/3.7.10.5": {
+      "AWSSDK.Core/3.7.10.8": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
@@ -49,10 +49,10 @@
           "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
         }
       },
-      "AWSSDK.SecurityToken/3.7.1.137": {
+      "AWSSDK.SecurityToken/3.7.1.140": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.10.5, 4.0.0)"
+          "AWSSDK.Core": "[3.7.10.8, 4.0.0)"
         },
         "compile": {
           "lib/netcoreapp3.1/AWSSDK.SecurityToken.dll": {}
@@ -74,7 +74,7 @@
           "build/netstandard1.0/Microsoft.CodeCoverage.targets": {}
         }
       },
-      "Microsoft.Identity.Client/4.43.0": {
+      "Microsoft.Identity.Client/4.43.1": {
         "type": "package",
         "compile": {
           "lib/netcoreapp2.1/Microsoft.Identity.Client.dll": {}
@@ -378,7 +378,7 @@
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Win32.SystemEvents/7.0.0-preview.2.22152.2": {
+      "Microsoft.Win32.SystemEvents/7.0.0-preview.3.22175.4": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {}
@@ -694,11 +694,11 @@
           "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
         }
       },
-      "System.Configuration.ConfigurationManager/7.0.0-preview.2.22152.2": {
+      "System.Configuration.ConfigurationManager/7.0.0-preview.3.22175.4": {
         "type": "package",
         "dependencies": {
-          "System.Security.Cryptography.ProtectedData": "7.0.0-preview.2.22152.2",
-          "System.Security.Permissions": "7.0.0-preview.2.22152.2"
+          "System.Security.Cryptography.ProtectedData": "7.0.0-preview.3.22175.4",
+          "System.Security.Permissions": "7.0.0-preview.3.22175.4"
         },
         "compile": {
           "lib/net6.0/System.Configuration.ConfigurationManager.dll": {}
@@ -772,10 +772,10 @@
           "ref/netstandard1.5/System.Diagnostics.Tracing.dll": {}
         }
       },
-      "System.Drawing.Common/7.0.0-preview.2.22152.2": {
+      "System.Drawing.Common/7.0.0-preview.3.22175.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "7.0.0-preview.2.22152.2"
+          "Microsoft.Win32.SystemEvents": "7.0.0-preview.3.22175.4"
         },
         "compile": {
           "lib/net6.0/System.Drawing.Common.dll": {}
@@ -1510,7 +1510,7 @@
           "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         }
       },
-      "System.Security.Cryptography.ProtectedData/7.0.0-preview.2.22152.2": {
+      "System.Security.Cryptography.ProtectedData/7.0.0-preview.3.22175.4": {
         "type": "package",
         "compile": {
           "lib/net6.0/System.Security.Cryptography.ProtectedData.dll": {}
@@ -1571,10 +1571,10 @@
           }
         }
       },
-      "System.Security.Permissions/7.0.0-preview.2.22152.2": {
+      "System.Security.Permissions/7.0.0-preview.3.22175.4": {
         "type": "package",
         "dependencies": {
-          "System.Windows.Extensions": "7.0.0-preview.2.22152.2"
+          "System.Windows.Extensions": "7.0.0-preview.3.22175.4"
         },
         "compile": {
           "lib/net6.0/System.Security.Permissions.dll": {}
@@ -1761,10 +1761,10 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {}
         }
       },
-      "System.Windows.Extensions/7.0.0-preview.2.22152.2": {
+      "System.Windows.Extensions/7.0.0-preview.3.22175.4": {
         "type": "package",
         "dependencies": {
-          "System.Drawing.Common": "7.0.0-preview.2.22152.2"
+          "System.Drawing.Common": "7.0.0-preview.3.22175.4"
         },
         "compile": {
           "lib/net6.0/System.Windows.Extensions.dll": {}
@@ -1909,14 +1909,14 @@
       },
       "CloudLib.Client.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "AWSSDK.CognitoIdentity": "3.7.0.145",
-          "AWSSDK.CognitoIdentityProvider": "3.7.2.9",
+          "AWSSDK.CognitoIdentity": "3.7.0.148",
+          "AWSSDK.CognitoIdentityProvider": "3.7.2.12",
           "Amazon.Extensions.CognitoAuthentication": "2.2.2",
-          "Microsoft.Identity.Client": "4.43.0",
+          "Microsoft.Identity.Client": "4.43.1",
           "Newtonsoft.Json": "13.0.1",
-          "System.Configuration.ConfigurationManager": "7.0.0-preview.2.22152.2",
+          "System.Configuration.ConfigurationManager": "7.0.0-preview.3.22175.4",
           "System.Net.NetworkInformation": "4.3.0"
         },
         "compile": {
@@ -1943,16 +1943,16 @@
         "lib/netstandard2.0/Amazon.Extensions.CognitoAuthentication.dll"
       ]
     },
-    "AWSSDK.CognitoIdentity/3.7.0.145": {
-      "sha512": "Jy+Jz/xDSduxPEbRdXuyqj5teNmxOt+nRcftTSle58fj/wmuNwbHgDpGPp61ZTZvoXrRpIAI20hgxvAUrFl6Zg==",
+    "AWSSDK.CognitoIdentity/3.7.0.148": {
+      "sha512": "eQqS8mZmdnkpd8FuKY7K5+VqM2HYU94GAqPA0ylqoQORUY5GbyYQCreK6pbmy0FAchfe6KQ/GyirHJW7y2Xe5Q==",
       "type": "package",
-      "path": "awssdk.cognitoidentity/3.7.0.145",
+      "path": "awssdk.cognitoidentity/3.7.0.148",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.CognitoIdentity.CodeAnalysis.dll",
-        "awssdk.cognitoidentity.3.7.0.145.nupkg.sha512",
+        "awssdk.cognitoidentity.3.7.0.148.nupkg.sha512",
         "awssdk.cognitoidentity.nuspec",
         "lib/net35/AWSSDK.CognitoIdentity.dll",
         "lib/net35/AWSSDK.CognitoIdentity.pdb",
@@ -1970,16 +1970,16 @@
         "tools/uninstall.ps1"
       ]
     },
-    "AWSSDK.CognitoIdentityProvider/3.7.2.9": {
-      "sha512": "aRPp99NqzJwr6gc6+JEDxASUjzXcFsX+0glOFUS2yzyteGze2Me4oSQ+FFhy94Db9Ktj54Y29c+SL3BMj8R9tQ==",
+    "AWSSDK.CognitoIdentityProvider/3.7.2.12": {
+      "sha512": "r1/TEHLigBC9XUoYvvfX6k3Bjjb3VLThcoQx1OFB939msd/KLICgf582Uh6qChiUocc36FJ15BhBik1QRJWtBQ==",
       "type": "package",
-      "path": "awssdk.cognitoidentityprovider/3.7.2.9",
+      "path": "awssdk.cognitoidentityprovider/3.7.2.12",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.CognitoIdentityProvider.CodeAnalysis.dll",
-        "awssdk.cognitoidentityprovider.3.7.2.9.nupkg.sha512",
+        "awssdk.cognitoidentityprovider.3.7.2.12.nupkg.sha512",
         "awssdk.cognitoidentityprovider.nuspec",
         "lib/net35/AWSSDK.CognitoIdentityProvider.dll",
         "lib/net35/AWSSDK.CognitoIdentityProvider.pdb",
@@ -1997,15 +1997,15 @@
         "tools/uninstall.ps1"
       ]
     },
-    "AWSSDK.Core/3.7.10.5": {
-      "sha512": "D04DK/+58D2xyD1/WoBjp7Aq5T5M0ebonwp3cjRpx5lR4AeXPFc77JlMlWHX2/ST6dEfbp+zQjyE2AyNOfRcVw==",
+    "AWSSDK.Core/3.7.10.8": {
+      "sha512": "9bW62kH+p4OvYj98KpeapiWd4WFF7U7QnIBX7Rh6qiwtVx+YRxjzJHbV1X/ucotVHQVajkkB8YtUWN6Za+joTw==",
       "type": "package",
-      "path": "awssdk.core/3.7.10.5",
+      "path": "awssdk.core/3.7.10.8",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.3.7.10.5.nupkg.sha512",
+        "awssdk.core.3.7.10.8.nupkg.sha512",
         "awssdk.core.nuspec",
         "lib/net35/AWSSDK.Core.dll",
         "lib/net35/AWSSDK.Core.pdb",
@@ -2022,16 +2022,16 @@
         "tools/account-management.ps1"
       ]
     },
-    "AWSSDK.SecurityToken/3.7.1.137": {
-      "sha512": "PllPeeQ74kqVfyyJZVAzcZ/bFkNS7IbJ4KKueGkz9HhNQmz/O9iy0l1HRBa7AtO67mXEj1Gtky+53Eg/3pLF8Q==",
+    "AWSSDK.SecurityToken/3.7.1.140": {
+      "sha512": "bPwgMEM8A9tKF/aqEmPM8MYgQX8QfB9Xt8P8PL62DyV2xYm0i9MyaNd4FLrUc1SD7AuNLSWoEMzA/V2o8jVBDg==",
       "type": "package",
-      "path": "awssdk.securitytoken/3.7.1.137",
+      "path": "awssdk.securitytoken/3.7.1.140",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.SecurityToken.CodeAnalysis.dll",
-        "awssdk.securitytoken.3.7.1.137.nupkg.sha512",
+        "awssdk.securitytoken.3.7.1.140.nupkg.sha512",
         "awssdk.securitytoken.nuspec",
         "lib/net35/AWSSDK.SecurityToken.dll",
         "lib/net35/AWSSDK.SecurityToken.pdb",
@@ -2109,10 +2109,10 @@
         "microsoft.codecoverage.nuspec"
       ]
     },
-    "Microsoft.Identity.Client/4.43.0": {
-      "sha512": "uaUMZB3Ywi7IPVvgRZOQotlYhD8sA4wtZESkA0qF9SYAifr1RzJyaGTFtfbAyZ/J5kGUhRklrCJIRpd0MaihKQ==",
+    "Microsoft.Identity.Client/4.43.1": {
+      "sha512": "+bE40RXfRRrkDMppgFWCl2qByoZgsmiSP1z9x3ovpBBHI5l/2iUjyaBBa2Kz7FMld183uevvAKhZBkWmtyfdIg==",
       "type": "package",
-      "path": "microsoft.identity.client/4.43.0",
+      "path": "microsoft.identity.client/4.43.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2137,7 +2137,7 @@
         "lib/xamarinios10/Microsoft.Identity.Client.xml",
         "lib/xamarinmac20/Microsoft.Identity.Client.dll",
         "lib/xamarinmac20/Microsoft.Identity.Client.xml",
-        "microsoft.identity.client.4.43.0.nupkg.sha512",
+        "microsoft.identity.client.4.43.1.nupkg.sha512",
         "microsoft.identity.client.nuspec"
       ]
     },
@@ -2709,10 +2709,10 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Microsoft.Win32.SystemEvents/7.0.0-preview.2.22152.2": {
-      "sha512": "NV7GH8Qtd2dD4FIAqbMSGVBFwiPBNF4Vz7VaL7JWolwQeYwtGoDLh3UHjnObc1uGiDMi29mA0kAC/DTRZRcdqA==",
+    "Microsoft.Win32.SystemEvents/7.0.0-preview.3.22175.4": {
+      "sha512": "W5faGXqAfIibjI4bj5lfRRbxSIMLQWiR0zVMMX61XnXJFZGUmPhFaEFdqvpO4elpHVg2+dj41/+Ss15AOW8PvA==",
       "type": "package",
-      "path": "microsoft.win32.systemevents/7.0.0-preview.2.22152.2",
+      "path": "microsoft.win32.systemevents/7.0.0-preview.3.22175.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2731,7 +2731,7 @@
         "lib/net7.0/Microsoft.Win32.SystemEvents.xml",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "microsoft.win32.systemevents.7.0.0-preview.2.22152.2.nupkg.sha512",
+        "microsoft.win32.systemevents.7.0.0-preview.3.22175.4.nupkg.sha512",
         "microsoft.win32.systemevents.nuspec",
         "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
@@ -3228,10 +3228,10 @@
         "system.collections.concurrent.nuspec"
       ]
     },
-    "System.Configuration.ConfigurationManager/7.0.0-preview.2.22152.2": {
-      "sha512": "JQSqrmVXT5d77yYDhl1pSAbVpqwFXcmDF1LEN6NnZiZNT9uUpG10xo1hJfiMrLR+YlxZNdPTKPwwTGKQBmA7NQ==",
+    "System.Configuration.ConfigurationManager/7.0.0-preview.3.22175.4": {
+      "sha512": "8gsi9o9yu76Qr4BLmotYGfqhhfmGTD+1K8j13Ke8qNnILB3dBCR0ktUqL9h8gpx5+T92eney0VC2MkNq6Qvpew==",
       "type": "package",
-      "path": "system.configuration.configurationmanager/7.0.0-preview.2.22152.2",
+      "path": "system.configuration.configurationmanager/7.0.0-preview.3.22175.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3250,7 +3250,7 @@
         "lib/net7.0/System.Configuration.ConfigurationManager.xml",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
-        "system.configuration.configurationmanager.7.0.0-preview.2.22152.2.nupkg.sha512",
+        "system.configuration.configurationmanager.7.0.0-preview.3.22175.4.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -3529,10 +3529,10 @@
         "system.diagnostics.tracing.nuspec"
       ]
     },
-    "System.Drawing.Common/7.0.0-preview.2.22152.2": {
-      "sha512": "QLmKaZB39HNfXxwzjwGqWtwA1etowiqxapov2APt7hqq73IT2Mbf3Qi5LqXs7CTNHTItvElERAKYNVnwebUZLQ==",
+    "System.Drawing.Common/7.0.0-preview.3.22175.4": {
+      "sha512": "y0a1YcX7JbMw0EwREBlViPi/FFnK5HTN5mjtLLVlSaLoEXXhx2RJ+7ZcWbGmssk+g9aRiguVPFUas+vjSVHs0Q==",
       "type": "package",
-      "path": "system.drawing.common/7.0.0-preview.2.22152.2",
+      "path": "system.drawing.common/7.0.0-preview.3.22175.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3565,7 +3565,7 @@
         "runtimes/win/lib/net6.0/System.Drawing.Common.xml",
         "runtimes/win/lib/net7.0/System.Drawing.Common.dll",
         "runtimes/win/lib/net7.0/System.Drawing.Common.xml",
-        "system.drawing.common.7.0.0-preview.2.22152.2.nupkg.sha512",
+        "system.drawing.common.7.0.0-preview.3.22175.4.nupkg.sha512",
         "system.drawing.common.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -5560,10 +5560,10 @@
         "system.security.cryptography.primitives.nuspec"
       ]
     },
-    "System.Security.Cryptography.ProtectedData/7.0.0-preview.2.22152.2": {
-      "sha512": "zyoIjyvgq7GIhbadaxw/iW16RlCvnkwUZmNNBP1x1zoqNxEi5G+654Lv6wdngnk0A8chCgSQRLJCERfghbcDlg==",
+    "System.Security.Cryptography.ProtectedData/7.0.0-preview.3.22175.4": {
+      "sha512": "z7bU811QLr8DOCIWOu7RH9qoqKoY+64aGOk6LRzQlpctG9cz91YvW4NdELB4H4b0U7GAKv9hqgasHsYxEtZ+2g==",
       "type": "package",
-      "path": "system.security.cryptography.protecteddata/7.0.0-preview.2.22152.2",
+      "path": "system.security.cryptography.protecteddata/7.0.0-preview.3.22175.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5592,7 +5592,7 @@
         "runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.xml",
         "runtimes/win/lib/net7.0/System.Security.Cryptography.ProtectedData.dll",
         "runtimes/win/lib/net7.0/System.Security.Cryptography.ProtectedData.xml",
-        "system.security.cryptography.protecteddata.7.0.0-preview.2.22152.2.nupkg.sha512",
+        "system.security.cryptography.protecteddata.7.0.0-preview.3.22175.4.nupkg.sha512",
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -5653,10 +5653,10 @@
         "system.security.cryptography.x509certificates.nuspec"
       ]
     },
-    "System.Security.Permissions/7.0.0-preview.2.22152.2": {
-      "sha512": "qB3V5vrTM+Hb5QX3H5A6CC7IklNnfkmidYPADvDuAhQ+4a5ysAhTOiSxBBQ0C6wqRiE0Pc1JBUk88QZtfhNPew==",
+    "System.Security.Permissions/7.0.0-preview.3.22175.4": {
+      "sha512": "Y2czPCBL8PFp9gwhEIxiR0eRdTCYO1Rcen0FxGdf0vj71/q1fOFdfq5hbydEdPL1DvEIjbsQTzf4adHpKgca1g==",
       "type": "package",
-      "path": "system.security.permissions/7.0.0-preview.2.22152.2",
+      "path": "system.security.permissions/7.0.0-preview.3.22175.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5675,7 +5675,7 @@
         "lib/net7.0/System.Security.Permissions.xml",
         "lib/netstandard2.0/System.Security.Permissions.dll",
         "lib/netstandard2.0/System.Security.Permissions.xml",
-        "system.security.permissions.7.0.0-preview.2.22152.2.nupkg.sha512",
+        "system.security.permissions.7.0.0-preview.3.22175.4.nupkg.sha512",
         "system.security.permissions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -6309,10 +6309,10 @@
         "system.threading.timer.nuspec"
       ]
     },
-    "System.Windows.Extensions/7.0.0-preview.2.22152.2": {
-      "sha512": "ogDvGfhziQaLWhYLTJH88L/WR+8GxLnPBaBkQE5yS7fXShYktpH2fBZA0TMMcXTLf1YtJKg0gM2hNX3WEvk3fw==",
+    "System.Windows.Extensions/7.0.0-preview.3.22175.4": {
+      "sha512": "oQ/mU1WHq2aUhTPlfSQuLkNkuca95jddAbNFOAY0MGyX79uPWvqJcOUHwnCCOdVvyqe9dHW+WfEZS4MMGDycqw==",
       "type": "package",
-      "path": "system.windows.extensions/7.0.0-preview.2.22152.2",
+      "path": "system.windows.extensions/7.0.0-preview.3.22175.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6327,7 +6327,7 @@
         "runtimes/win/lib/net6.0/System.Windows.Extensions.xml",
         "runtimes/win/lib/net7.0/System.Windows.Extensions.dll",
         "runtimes/win/lib/net7.0/System.Windows.Extensions.xml",
-        "system.windows.extensions.7.0.0-preview.2.22152.2.nupkg.sha512",
+        "system.windows.extensions.7.0.0-preview.3.22175.4.nupkg.sha512",
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -6702,12 +6702,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.0, 6.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-preview.2.22153.17\\RuntimeIdentifierGraph.json"
       }
     }
   }
