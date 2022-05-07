@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+		<RootNamespace>CloudLib.Client.WinUI.Core</RootNamespace>
+		<RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+		<UseWinUI>true</UseWinUI>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+		<Nullable>enable</Nullable>
+		<Platforms>x64;x86;arm64</Platforms>
+		<RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>True</RunAnalyzersDuringLiveAnalysis>
+		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Amazon.Extensions.CognitoAuthentication" Version="2.2.2" />
+		<PackageReference Include="AWSSDK.CognitoIdentity" Version="3.7.0.149" />
+		<PackageReference Include="Microsoft.Identity.Client" Version="4.43.1" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+	</ItemGroup>
+</Project>

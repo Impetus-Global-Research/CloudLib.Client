@@ -6,10 +6,4 @@
     xmlns:local="using:CloudLib.Client.WinUI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
-        <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <Button Name="Button" />
-        </Grid>
-    </Grid>
 </Window>

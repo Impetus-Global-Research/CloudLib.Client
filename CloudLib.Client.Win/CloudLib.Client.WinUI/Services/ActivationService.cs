@@ -1,24 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using CloudLib.Client.WinUI;
 using CloudLib.Client.WinUI.Activation;
 using CloudLib.Client.WinUI.Views;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
-namespace CloudLib.Client.WinUI.Core.Services
+namespace CloudLib.Client.WinUI.Services
 {
     internal class ActivationService
     {
         private readonly Type _defaultNavItem;
-        private object _lastActivationArgs;
+        private object? _lastActivationArgs;
         public App App { get; }
-        public Lazy<UIElement?> Shell { get; }
+        public Lazy<ShellPage> Shell { get; }
 
-        public ActivationService(App app, Type defaultNavItem, Lazy<UIElement?> shell)
+        public ActivationService(App app, Type defaultNavItem, Lazy<ShellPage> shell)
         {
             _defaultNavItem = defaultNavItem;
             App = app;
@@ -29,24 +27,14 @@ namespace CloudLib.Client.WinUI.Core.Services
         {
             if (IsInteractive(arguments))
             {
-                await InitializeAsync();
+                //All tasks which need to be completed AFTER ACTIVATION
+                await StartupAsync();
 
                 //TODO: Authenticate with STS and obtain token here
-
-                Window.Current.Content ??= Shell?.Value ?? new Frame();
             }
 
             await HandleActivationAsync(arguments);
             _lastActivationArgs = arguments;
-
-            if (IsInteractive(arguments))
-            {
-                //Ensure that the current Window is active
-                Window.Current.Activate();
-
-                //All tasks which need to be completed AFTER ACTIVATION
-                await StartupAsync();
-            }
         }
 
         private async Task StartupAsync()
@@ -72,9 +60,9 @@ namespace CloudLib.Client.WinUI.Core.Services
             }
         }
 
-        private IEnumerable<SchemeActivationHandler> GetActivationHandlers()
+        private IEnumerable<ActivationHandler> GetActivationHandlers()
         {
-            yield return new SchemeActivationHandler();
+            yield return new DefaultActivationHandler(_defaultNavItem);
         }
 
         private async Task InitializeAsync()
@@ -85,7 +73,7 @@ namespace CloudLib.Client.WinUI.Core.Services
         private bool IsInteractive(object arguments)
         {
             //TODO: Determine from the passed arguments if the app should activate interactively or not
-            return false;
+            return true;
         }
     }
 }

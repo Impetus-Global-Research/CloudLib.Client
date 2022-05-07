@@ -1,7 +1,9 @@
 {
   "profiles": {
     "CloudLib.Client.WinUI (Package)": {
-      "commandName": "MsixPackage"
+      "commandName": "MsixPackage",
+      "alwaysReinstallApp": true,
+      "nativeDebugging": true
     },
     "CloudLib.Client.WinUI (Unpackaged)": {
       "commandName": "Project"

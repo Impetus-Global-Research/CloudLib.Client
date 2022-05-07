@@ -15,7 +15,7 @@ namespace CloudLib.Client.WinUI.Views
 
         public SchemeActivationSamplePage()
         {
-            //InitializeComponent();
+            this.InitializeComponent();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

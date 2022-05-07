@@ -11,62 +11,76 @@
 		<UseWinUI>true</UseWinUI>
 		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
 		<Nullable>enable</Nullable>
+		<!--<SupportedOSPlatformVersion>10.0.22000.0</SupportedOSPlatformVersion>-->
+		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
+		<DebugType>full</DebugType>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Remove="Styles\_Thickness.xaml" />
+		<None Remove="Views\LoginPage.xaml" />
 		<None Remove="Views\MainPage.xaml" />
-		<None Remove="Views\ShellPage.xaml" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Page Remove="Views\SchemeActivationSamplePage.xaml" />
+		<None Remove="Views\MainWindow.xaml" />
+		<None Remove="Views\SettingsPage.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="Assets\SplashScreen.scale-200.png" />
-		<Content Include="Assets\LockScreenLogo.scale-200.png" />
-		<Content Include="Assets\Square150x150Logo.scale-200.png" />
-		<Content Include="Assets\Square44x44Logo.scale-200.png" />
-		<Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-		<Content Include="Assets\StoreLogo.png" />
-		<Content Include="Assets\Wide310x150Logo.scale-200.png" />
+		<ProjectReference Include="..\CloudLib.Client.WinUI.Core\CloudLib.Client.WinUI.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview3" />
 		<PackageReference Include="CommunityToolkit.WinUI.UI" Version="7.1.2" />
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.3" />
-		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22598-preview" />
 		<PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.0.8" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22000.194" />
 		<Manifest Include="$(ApplicationManifest)" />
 	</ItemGroup>
 
-	<!-- Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
-       Tools extension to be activated for this project even if the Windows App SDK Nuget
-       package has not yet been restored -->
-	<ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnablePreviewMsixTooling)'=='true'">
-		<ProjectCapability Include="Msix" />
-	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\..\CloudLib.Client.WinUI.Core\CloudLib.Client.WinUI.Core.csproj" />
+	  <None Include="..\.editorconfig" Link=".editorconfig" />
 	</ItemGroup>
+
 	<ItemGroup>
-	  <None Update="Views\SchemeActivationSamplePage.xaml">
+	  <Page Update="Views\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
-	  </None>
+	  </Page>
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Page Update="Views\SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
+	</ItemGroup>
+
 	<ItemGroup>
 	  <Page Update="Views\MainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </Page>
 	</ItemGroup>
+
 	<ItemGroup>
-		<Page Update="Styles\_Thickness.xaml">
+		<Page Update="MainWindow.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</Page>
 	</ItemGroup>
 	<ItemGroup>
-	  <Page Update="Views\ShellPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </Page>
+		<Page Update="ShellPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
+	<ItemGroup>
+		<Page Update="Views\UserControl1.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
+	<ItemGroup>
+		<Page Update="Themes\Generic.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
+	<!-- Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+       Tools extension to be activated for this project even if the Windows App SDK Nuget
+       package has not yet been restored -->
+	<ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnablePreviewMsixTooling)'=='true'">
+		<ProjectCapability Include="Msix" />
 	</ItemGroup>
 </Project>

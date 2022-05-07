@@ -19,7 +19,7 @@ namespace CloudLib.Client.WinUI.Extensions
             return appData.RoamingStorageQuota == 0;
         }
 
-        public static async Task SaveAsync<T>(this StorageFolder folder, string name, T content)
+        public static async Task SaveAsync<T>(this StorageFolder folder, string name, T? content)
         {
             var file = await folder.CreateFileAsync(GetFileName(name), CreationCollisionOption.ReplaceExisting);
             var fileContent = await Json.StringifyAsync(content);
@@ -27,7 +27,7 @@ namespace CloudLib.Client.WinUI.Extensions
             await FileIO.WriteTextAsync(file, fileContent);
         }
 
-        public static async Task<T> ReadAsync<T>(this StorageFolder folder, string name)
+        public static async Task<T?> ReadAsync<T>(this StorageFolder folder, string name)
         {
             if (!File.Exists(Path.Combine(folder.Path, GetFileName(name))))
             {
@@ -40,17 +40,17 @@ namespace CloudLib.Client.WinUI.Extensions
             return await Json.ToObjectAsync<T>(fileContent.AsStream());
         }
 
-        public static async Task SaveAsync<T>(this ApplicationDataContainer settings, string key, T value)
+        public static async Task SaveAsync<T>(this ApplicationDataContainer settings, string key, T? value)
         {
             settings.SaveString(key, await Json.StringifyAsync(value));
         }
 
-        public static void SaveString(this ApplicationDataContainer settings, string key, string value)
+        public static void SaveString(this ApplicationDataContainer settings, string key, string? value)
         {
             settings.Values[key] = value;
         }
 
-        public static async Task<T> ReadAsync<T>(this ApplicationDataContainer settings, string key)
+        public static async Task<T?> ReadAsync<T>(this ApplicationDataContainer settings, string key)
         {
             object obj = null;
 

@@ -1,39 +1,35 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Windows.ApplicationModel.Activation;
+using Microsoft.UI.Dispatching;
 using CloudLib.Client.WinUI.Services;
 using Microsoft.UI.Xaml;
-using LaunchActivatedEventArgs = Windows.ApplicationModel.Activation.LaunchActivatedEventArgs;
 
 namespace CloudLib.Client.WinUI.Activation
 {
-    internal class DefaultActivationHandler : ActivationHandler<IActivatedEventArgs>
+    internal class DefaultActivationHandler : ActivationHandler<LaunchActivatedEventArgs>
     {
         private readonly Type _navElement;
 
-        public DefaultActivationHandler(Type navElement)
+        public DefaultActivationHandler(Type? navElement)
         {
-            _navElement = navElement;
+            _navElement = navElement ?? typeof(MainWindow);
         }
 
-        protected override async Task HandleInternalAsync(IActivatedEventArgs args)
+        protected override async Task HandleInternalAsync(LaunchActivatedEventArgs? args)
         {
             // When the navigation stack isn't restored, navigate to the first page and configure
             // the new page by passing required information in the navigation parameter
-            object arguments = null;
-            if (args is LaunchActivatedEventArgs launchArgs)
+            if (NavigationService.Frame.DispatcherQueue.HasThreadAccess)
             {
-                arguments = launchArgs.Arguments;
+                bool success = NavigationService.Frame.DispatcherQueue.TryEnqueue(
+                    () => NavigationService.Navigate(_navElement, null));
             }
-
-            NavigationService.Navigate(_navElement, arguments);
-            await Task.CompletedTask;
         }
 
-        protected override bool CanHandleInternal(IActivatedEventArgs args)
+        protected override bool CanHandleInternal(LaunchActivatedEventArgs? args)
         {
             // None of the ActivationHandlers has handled the app activation
-            return NavigationService.Frame.Content == null && _navElement != null;
+            return NavigationService.Frame?.Content == null && _navElement != null;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using Microsoft.Windows;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
@@ -14,12 +15,11 @@ namespace CloudLib.Client.WinUI.Helpers
         {
             var byteArray = Convert.FromBase64String(data);
             var image = new BitmapImage();
-            using (var stream = new InMemoryRandomAccessStream())
-            {
-                await stream.WriteAsync(byteArray.AsBuffer());
-                stream.Seek(0);
-                await image.SetSourceAsync(stream);
-            }
+            using var stream = new InMemoryRandomAccessStream();
+
+            await stream.WriteAsync(byteArray.AsBuffer());
+            stream.Seek(0);
+            await image.SetSourceAsync(stream);
 
             return image;
         }
@@ -47,7 +47,7 @@ namespace CloudLib.Client.WinUI.Helpers
             return imageFile;
         }
 
-        public static async Task<BitmapImage> GetBitmapFromImageAsync(StorageFile file)
+        public static async Task<BitmapImage?> GetBitmapFromImageAsync(StorageFile? file)
         {
             if (file == null)
             {

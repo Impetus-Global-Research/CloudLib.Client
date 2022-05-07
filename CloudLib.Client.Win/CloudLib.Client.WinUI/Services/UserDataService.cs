@@ -15,13 +15,13 @@ namespace CloudLib.Client.WinUI.Services
     {
         private const string _userSettingsKey = "IdentityUser";
 
-        private UserViewModel _user;
+        private UserViewModel? _user;
 
         private IIdentityService IdentityService => Singleton<CognitoIdentityService>.Instance;
 
         private MicrosoftGraphService MicrosoftGraphService => Singleton<MicrosoftGraphService>.Instance;
 
-        public event EventHandler<UserViewModel> UserDataUpdated;
+        public event EventHandler<UserViewModel?> UserDataUpdated;
 
         public UserDataService()
         {
@@ -33,7 +33,7 @@ namespace CloudLib.Client.WinUI.Services
             IdentityService.LoggedOut += OnLoggedOut;
         }
 
-        public async Task<UserViewModel> GetUserAsync()
+        public async Task<UserViewModel?> GetUserAsync()
         {
             if (_user == null)
             {
@@ -59,13 +59,13 @@ namespace CloudLib.Client.WinUI.Services
             await ApplicationData.Current.LocalFolder.SaveAsync<User>(_userSettingsKey, null);
         }
 
-        private async Task<UserViewModel> GetUserFromCacheAsync()
+        private async Task<UserViewModel?> GetUserFromCacheAsync()
         {
             var cacheData = await ApplicationData.Current.LocalFolder.ReadAsync<User>(_userSettingsKey);
             return await GetUserViewModelFromData(cacheData);
         }
 
-        private async Task<UserViewModel> GetUserFromGraphApiAsync()
+        private async Task<UserViewModel?> GetUserFromGraphApiAsync()
         {
             var accessToken = await IdentityService.GetAccessTokenForGraphAsync();
             if (string.IsNullOrEmpty(accessToken))
@@ -83,7 +83,7 @@ namespace CloudLib.Client.WinUI.Services
             return await GetUserViewModelFromData(userData);
         }
 
-        private async Task<UserViewModel> GetUserViewModelFromData(User userData)
+        private async Task<UserViewModel?> GetUserViewModelFromData(User? userData)
         {
             if (userData == null)
             {
@@ -102,7 +102,7 @@ namespace CloudLib.Client.WinUI.Services
             };
         }
 
-        private UserViewModel GetDefaultUserData()
+        private UserViewModel? GetDefaultUserData()
         {
             return new UserViewModel()
             {
