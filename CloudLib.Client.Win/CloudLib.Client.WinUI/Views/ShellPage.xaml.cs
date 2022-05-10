@@ -18,15 +18,16 @@ namespace CloudLib.Client.WinUI.Views
         {
 
             this.InitializeComponent();
+
             ViewModel.Initialize(ShellFrame, NavigationView, new List<KeyboardAccelerator>());
         }
 
-
-        public ShellViewModel ViewModel { get; } = new();
-
-        private void NavigationView_OnLoaded(object sender, RoutedEventArgs e)
+        private void NavigationView_OnLoaded(object sender, RoutedEventArgs args)
         {
-            ViewModel.LoadedCommand.Execute(e);
+            if (ViewModel.LoadedCommand.CanExecute(args))
+            {
+                ViewModel.LoadedCommand.Execute(args);
+            }
         }
 
         private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)

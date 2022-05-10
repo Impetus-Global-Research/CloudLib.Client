@@ -182,7 +182,27 @@ namespace CloudLib.Client.WinUI.ViewModels
             IsAuthorized = IsLoggedIn && IdentityService.IsAuthorized();
             User = await UserDataService.GetUserAsync();
 
+            if (_navigationView is not null)
+            {
+                _navigationView?.MenuItems.Clear();
+                _navigationView.MenuItemsSource = UpdateNavigationMenuItems();
+            }
+        }
 
+        //TODO: Implement NavMenu.ObjectModel namespace for handling the dynamic creation of menu lists 
+        private IList<NavigationViewItemBase> UpdateNavigationMenuItems()
+        {
+            NavigationViewItem homePageMenuItem = new()
+            {
+                Icon = new SymbolIcon(Symbol.Home),
+                AccessKey = "HomePg",
+                Content = "HOME PAGE",
+            };
+
+
+            NavHelper.SetNavigateTo(homePageMenuItem, typeof(MainPage));
+
+            return new List<NavigationViewItemBase> { homePageMenuItem };
         }
 
         private void OnUserDataUpdated(object? sender, UserViewModel? userData)
@@ -228,7 +248,7 @@ namespace CloudLib.Client.WinUI.ViewModels
         {
             if (IsLoggedIn)
             {
-                //NavigationService.Navigate<SettingsPage>();
+                NavigationService.Navigate<SettingsPage>();
             }
             else
             {
@@ -270,7 +290,7 @@ namespace CloudLib.Client.WinUI.ViewModels
             //{
             //    Selected = _navigationView.SettingsItem as NavigationViewItem;
             //    return;
-            //}
+            //}-
 
             var selectedItem = GetSelectedItem(_navigationView!.MenuItems, e.SourcePageType);
             if (selectedItem != null)
@@ -289,7 +309,7 @@ namespace CloudLib.Client.WinUI.ViewModels
                 }
 
                 var selectedChild = GetSelectedItem(item.MenuItems, pageType);
-                if (selectedChild != null)
+                if (selectedChild is not null)
                 {
                     return selectedChild;
                 }
@@ -302,6 +322,12 @@ namespace CloudLib.Client.WinUI.ViewModels
         {
             var pageType = menuItem.GetValue(NavHelper.NavigateToProperty) as Type;
             return pageType == sourcePageType;
+        }
+
+        private ControlTemplate MenuItemTemplateSelector(UIElement element)
+        {
+            //TODO: Implement custom template selection logic for supporting the dynamic user profile button
+            throw new NotImplementedException();
         }
 
         private static KeyboardAccelerator BuildKeyboardAccelerator(VirtualKey key, VirtualKeyModifiers? modifiers = null)

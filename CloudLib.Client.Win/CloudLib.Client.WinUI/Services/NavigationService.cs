@@ -40,14 +40,14 @@ public static class NavigationService
         _frame.NavigationFailed += Frame_OnNavigationFailed;
     }
 
-    public static bool CanGoBack => Frame?.CanGoBack ?? false;
-    public static bool CanGoForward => Frame?.CanGoForward ?? false;
+    public static bool CanGoBack => Frame.CanGoBack;
+    public static bool CanGoForward => Frame.CanGoForward;
 
     public static bool GoBack()
     {
         if (CanGoBack)
         {
-            Frame?.GoBack();
+            Frame.GoBack();
             return true;
         }
 
@@ -58,7 +58,7 @@ public static class NavigationService
     {
         if (CanGoForward)
         {
-            Frame?.GoForward();
+            Frame.GoForward();
             return true;
         }
 
@@ -108,4 +108,9 @@ public static class NavigationService
 
     private static void Frame_OnNavigated(object sender, NavigationEventArgs args) => Navigated?.Invoke(sender, args);
     private static void Frame_OnNavigationFailed(object sender, NavigationFailedEventArgs args) => NavigationFailed?.Invoke(sender, args);
+
+    internal static void Navigate<T>() where T : Page
+    {
+        Navigate(typeof(T));
+    }
 }

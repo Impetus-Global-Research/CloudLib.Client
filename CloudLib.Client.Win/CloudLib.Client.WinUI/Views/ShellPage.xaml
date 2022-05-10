@@ -10,27 +10,29 @@
     xmlns:views="using:CloudLib.Client.WinUI.Views"
     d:DataContext="{d:DesignInstance viewModels:ShellViewModel}"
     mc:Ignorable="d">
+    <Page.DataContext>
+        <viewModels:ShellViewModel x:Name="ViewModel"/>
+    </Page.DataContext>
     <Page.Resources>
         <conv:BoolToVisibilityConverter x:Key="ReverseBoolToVisibility" FalseValue="Visible" TrueValue="Collapsed"/>
     </Page.Resources>
-
     <NavigationView x:Name="NavigationView"
                     PaneDisplayMode="Top"
-                    IsBackButtonVisible="Auto"
+                    IsBackButtonVisible="Collapsed"
                     IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
                     SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
                     ExpandedModeThresholdWidth="1280"
                     Background="{ThemeResource SystemControlBackgroundAltHighBrush}"
-                    SelectionChanged="NavigationView_SelectionChanged"
-                    FooterMenuItemsSource="{x:Bind ViewModel.FooterMenuItemsSource, Mode=OneWay}">
-        <NavigationView.MenuItems>
+                    Loaded="NavigationView_OnLoaded"
+                    SelectionChanged="NavigationView_SelectionChanged">
+        <!--<NavigationView.MenuItems>
             <NavigationViewItem
                 x:Uid="Shell_HomePage"
                 AccessKey="HomePg"
                 Content="HOME PAGE"
                 helpers:NavHelper.NavigateTo="views:MainPage"
                 Icon="Home" />
-        </NavigationView.MenuItems>
+        </NavigationView.MenuItems>-->
         <Frame x:Name="ShellFrame" x:FieldModifier="internal" />
     </NavigationView>
 </Page>
