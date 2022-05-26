@@ -16,13 +16,12 @@ namespace CloudLib.Client.WinUI.Views
     {
         public ShellPage()
         {
-
             this.InitializeComponent();
 
-            ViewModel.Initialize(ShellFrame, NavigationView, new List<KeyboardAccelerator>());
+            ViewModel.Initialize(ShellFrame, NavigationRibbon, new List<KeyboardAccelerator>());
         }
 
-        private void NavigationView_OnLoaded(object sender, RoutedEventArgs args)
+        private void NavigationRibbon_OnLoaded(object sender, RoutedEventArgs args)
         {
             if (ViewModel.LoadedCommand.CanExecute(args))
             {

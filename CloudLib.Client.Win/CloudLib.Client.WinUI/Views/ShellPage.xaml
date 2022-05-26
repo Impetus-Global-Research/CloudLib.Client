@@ -7,32 +7,84 @@
     xmlns:helpers="using:CloudLib.Client.WinUI.Core.Helpers"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="using:CloudLib.Client.WinUI.ViewModels"
-    xmlns:views="using:CloudLib.Client.WinUI.Views"
+    xmlns:views="using:CloudLib.Client.WinUI.Views" 
+    xmlns:controls="using:CloudLib.Client.WinUI.Controls"
     d:DataContext="{d:DesignInstance viewModels:ShellViewModel}"
     mc:Ignorable="d">
     <Page.DataContext>
         <viewModels:ShellViewModel x:Name="ViewModel"/>
     </Page.DataContext>
     <Page.Resources>
-        <conv:BoolToVisibilityConverter x:Key="ReverseBoolToVisibility" FalseValue="Visible" TrueValue="Collapsed"/>
+        <conv:BoolToVisibilityConverter x:Key="ReverseBoolToVisibility" FalseValue="NavigationViewBackButtonVisible.Collapsed" TrueValue="NavigationViewBackButtonVisible.Visible"/>
     </Page.Resources>
-    <NavigationView x:Name="NavigationView"
-                    PaneDisplayMode="Top"
-                    IsBackButtonVisible="Collapsed"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" MinHeight="42"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <controls:NavigationRibbon x:Name="NavigationRibbon"
+                                   Grid.Row="0"
+                                   SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
+                                   SelectionChanged="NavigationView_SelectionChanged"
+                                   IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}">
+            <!--Loaded="NavigationRibbon_OnLoaded"
+                    SelectionChanged="NavigationView_SelectionChanged">-->
+            <controls:NavigationRibbon.MenuItems>
+                <controls:NavigationRibbonItem Header="Home">
+                    <AppBarButton Icon="Home" Label="Home"/>
+                    <AppBarButton Icon="Directions" Label="Directions"/>
+                    <AppBarElementContainer>
+                        <AppBarButton>
+                            <AppBarButton.Flyout>
+                                <MenuFlyout Placement="Right">
+                                    <MenuFlyoutItem Text="Paper"
+                                                    Command="{x:Bind ViewModel.NewPaperCommand}"/>
+                                </MenuFlyout>
+                            </AppBarButton.Flyout>
+                        </AppBarButton>
+                    </AppBarElementContainer>
+                </controls:NavigationRibbonItem>
+                <controls:NavigationRibbonItem Header="View">
+                    <AppBarButton Icon="Library" Label="Library"/>
+                    <AppBarButton Icon="Previous" Label="Recents"/>
+                </controls:NavigationRibbonItem>
+            </controls:NavigationRibbon.MenuItems>
+            <controls:NavigationRibbon.Content>
+                <Grid Grid.Row="1">
+                    <Frame 
+                    x:Name="ShellFrame" 
+                    x:FieldModifier="public"/>
+                </Grid>
+            </controls:NavigationRibbon.Content>
+        </controls:NavigationRibbon>
+    </Grid>
+
+    <!--<controls:NavigationRibbon x:Name="NavigationView"
+                    PaneDisplayMode="LeftCompact"
                     IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
                     SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
                     ExpandedModeThresholdWidth="1280"
                     Background="{ThemeResource SystemControlBackgroundAltHighBrush}"
                     Loaded="NavigationView_OnLoaded"
-                    SelectionChanged="NavigationView_SelectionChanged">
-        <!--<NavigationView.MenuItems>
-            <NavigationViewItem
-                x:Uid="Shell_HomePage"
-                AccessKey="HomePg"
-                Content="HOME PAGE"
-                helpers:NavHelper.NavigateTo="views:MainPage"
-                Icon="Home" />
-        </NavigationView.MenuItems>-->
-        <Frame x:Name="ShellFrame" x:FieldModifier="internal" />
-    </NavigationView>
+                    SelectionChanged="NavigationView_SelectionChanged"
+                    Grid.Row="1">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45" MinHeight="45"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <MenuBar x:Name="Shell_MenuBar"
+                         Grid.Row="0">
+                    <MenuBarItem Title="File">
+                        <MenuFlyoutSubItem Text="New">
+                            <MenuFlyoutItem Text="Library"/>
+                        </MenuFlyoutSubItem>
+                    </MenuBarItem>
+                </MenuBar>
+                <Frame 
+                    x:Name="ShellFrame" 
+                    x:FieldModifier="internal" 
+                    Grid.Row="1"/>
+            </Grid>
+        </controls:NavigationRibbon>-->
 </Page>

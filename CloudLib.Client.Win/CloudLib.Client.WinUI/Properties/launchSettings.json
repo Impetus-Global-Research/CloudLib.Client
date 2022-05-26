@@ -3,7 +3,7 @@
     "CloudLib.Client.WinUI (Package)": {
       "commandName": "MsixPackage",
       "alwaysReinstallApp": true,
-      "nativeDebugging": true
+      "nativeDebugging": false
     },
     "CloudLib.Client.WinUI (Unpackaged)": {
       "commandName": "Project"

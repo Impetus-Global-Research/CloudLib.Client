@@ -18,7 +18,7 @@ namespace CloudLib.Client.WinUI
     {
         public MainWindow()
         {
-            this.InitializeComponent();
+            //this.InitializeComponent();
         }
     }
 }
