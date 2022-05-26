@@ -27,18 +27,17 @@
                                    SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
                                    SelectionChanged="NavigationView_SelectionChanged"
                                    IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}">
-            <!--Loaded="NavigationRibbon_OnLoaded"
-                    SelectionChanged="NavigationView_SelectionChanged">-->
+            <!--Loaded="NavigationRibbon_OnLoaded">-->
             <controls:NavigationRibbon.MenuItems>
                 <controls:NavigationRibbonItem Header="Home">
                     <AppBarButton Icon="Home" Label="Home"/>
                     <AppBarButton Icon="Directions" Label="Directions"/>
                     <AppBarElementContainer>
-                        <AppBarButton>
+                        <AppBarButton Icon="NewFolder" Label="New" IsCompact="True">
                             <AppBarButton.Flyout>
                                 <MenuFlyout Placement="Right">
-                                    <MenuFlyoutItem Text="Paper"
-                                                    Command="{x:Bind ViewModel.NewPaperCommand}"/>
+                                    <MenuFlyoutItem Text="Paper" />
+                                    <!--Command="{x:Bind ViewModel.NewPaperCommand}"/>-->
                                 </MenuFlyout>
                             </AppBarButton.Flyout>
                         </AppBarButton>
@@ -49,14 +48,14 @@
                     <AppBarButton Icon="Previous" Label="Recents"/>
                 </controls:NavigationRibbonItem>
             </controls:NavigationRibbon.MenuItems>
-            <controls:NavigationRibbon.Content>
-                <Grid Grid.Row="1">
-                    <Frame 
+        </controls:NavigationRibbon>
+        <ScrollViewer Grid.Row="1"
+                      HorizontalScrollBarVisibility="Hidden"
+                      VerticalScrollBarVisibility="Auto">
+            <Frame 
                     x:Name="ShellFrame" 
                     x:FieldModifier="public"/>
-                </Grid>
-            </controls:NavigationRibbon.Content>
-        </controls:NavigationRibbon>
+        </ScrollViewer>
     </Grid>
 
     <!--<controls:NavigationRibbon x:Name="NavigationView"

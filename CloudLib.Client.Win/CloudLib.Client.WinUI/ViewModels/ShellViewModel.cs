@@ -197,9 +197,9 @@ namespace CloudLib.Client.WinUI.ViewModels
             }
             else
             {
-                if (args.SelectedItemContainer is NavigationRibbonItem selectedItem)
+                if (args.SelectedItemContainer is NavigationViewItem selectedNavItem)
                 {
-                    if (selectedItem?.GetValue(NavHelper.NavigateToProperty) is Type pageType)
+                    if (selectedNavItem?.GetValue(NavHelper.NavigateToProperty) is Type pageType)
                     {
                         NavigationService.Navigate(pageType, null, args.RecommendedNavigationTransitionInfo);
                     }
