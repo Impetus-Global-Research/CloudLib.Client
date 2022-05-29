@@ -69,6 +69,7 @@ namespace CloudLib.Client.WinUI.Controls
             SelectedItem = MenuItems.FirstOrDefault();
         }
 
+        public TypedEventHandler<NavigationRibbon, NavigationRibbonSelectionChangedEventArgs> SelectedRibbonItemChanged;
 
         private void NavigationRibbon_SelectedItemChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
