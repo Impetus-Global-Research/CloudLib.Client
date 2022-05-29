@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
 using Windows.System;
-using Microsoft.Windows.System;
 using CloudLib.Client.WinUI.Core.Helpers;
 using CloudLib.Client.WinUI.Core.Services;
 using CloudLib.Client.WinUI.Services;
@@ -13,9 +12,8 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Navigation;
 using CloudLib.Client.WinUI.Views;
-using System.Drawing;
-using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml;
+using CloudLib.Client.WinUI.Controls;
 
 namespace CloudLib.Client.WinUI.ViewModels
 {
@@ -24,7 +22,6 @@ namespace CloudLib.Client.WinUI.ViewModels
         private readonly KeyboardAccelerator _altLeftKeyboardAccelerator = BuildKeyboardAccelerator(VirtualKey.Left, VirtualKeyModifiers.Menu);
         private readonly KeyboardAccelerator _backKeyboardAccelerator = BuildKeyboardAccelerator(VirtualKey.GoBack);
 
-        private NavigationViewItem? _footerMenuItemsSource;
         private bool _isBackEnabled;
         private IList<KeyboardAccelerator>? _keyboardAccelerators;
         private NavigationView? _navigationView;
@@ -36,10 +33,17 @@ namespace CloudLib.Client.WinUI.ViewModels
         private bool _isBusy;
         private bool _isLoggedIn;
         private bool _isAuthorized;
+        private bool _isVisible;
 
         private IdentityService IdentityService => Singleton<IdentityService>.Instance;
 
         private UserDataService UserDataService => Singleton<UserDataService>.Instance;
+
+        public bool IsVisible
+        {
+            get => _isVisible;
+            set => SetProperty(ref _isVisible, value);
+        }
 
         public bool IsBackEnabled
         {
@@ -85,20 +89,15 @@ namespace CloudLib.Client.WinUI.ViewModels
             }
         }
 
-        public event EventHandler<AuthChangedEventArgs> AuthChanged;
+        public event EventHandler<AuthChangedEventArgs>? AuthChanged;
 
         public bool IsAuthorized
         {
             get => _isAuthorized;
             set => SetProperty(ref _isAuthorized, value);
         }
-        public NavigationViewItem FooterMenuItemsSource
-        {
-            get => _footerMenuItemsSource ??= BuildDefaultFooterMenuItems();
-            set => SetProperty(ref _footerMenuItemsSource, value);
-        }
 
-        public void Initialize(Frame frame, NavigationView navigationView, IList<KeyboardAccelerator>? keyboardAccelerators = default)
+        public void Initialize(Frame frame, NavigationRibbon navigationView, IList<KeyboardAccelerator>? keyboardAccelerators = default)
         {
             _navigationView = navigationView;
             _keyboardAccelerators = keyboardAccelerators ?? new List<KeyboardAccelerator>();
@@ -116,60 +115,10 @@ namespace CloudLib.Client.WinUI.ViewModels
 
             UserDataService.UserDataUpdated += OnUserDataUpdated;
 
-            _footerMenuItemsSource = BuildDefaultFooterMenuItems();
         }
 
         private async void OnAuthChanged(object? sender, AuthChangedEventArgs e)
         {
-            UpdateNavigationMenuFooter(sender, e.IsLoggedIn);
-        }
-
-        private void UpdateNavigationMenuFooter(object? sender, bool isLoggedIn)
-        {
-            NavigationViewItem navFooter = isLoggedIn 
-                ? BuildFooterMenuItems() 
-                : BuildDefaultFooterMenuItems();
-
-            NavigationViewItem BuildFooterMenuItems()
-            {
-
-                NavigationViewItem profileMenuItem = new()
-                {
-                    Icon = User is not null
-                        ? new ImageIcon { Source = User.Photo }
-                        : new SymbolIcon(Symbol.Contact)
-                };
-
-
-                NavHelper.SetNavigateTo(profileMenuItem, typeof(LoginPage));
-
-
-                return new NavigationViewItem()
-                {
-                    MenuItems =
-                    {
-                        profileMenuItem,
-                    },
-                };
-            }
-        }
-
-        private static NavigationViewItem BuildDefaultFooterMenuItems()
-        {
-            var profileMenuItem = new NavigationViewItem
-            {
-                Icon = new SymbolIcon(Symbol.Contact)
-            };
-
-            NavHelper.SetNavigateTo(profileMenuItem, typeof(LoginPage));
-
-
-            return new NavigationViewItem{
-                MenuItems = 
-                { 
-                    profileMenuItem, 
-                },
-            };
         }
 
         internal async void OnLoaded()
@@ -181,8 +130,6 @@ namespace CloudLib.Client.WinUI.ViewModels
             IsLoggedIn = IdentityService.IsLoggedIn();
             IsAuthorized = IsLoggedIn && IdentityService.IsAuthorized();
             User = await UserDataService.GetUserAsync();
-
-
         }
 
         private void OnUserDataUpdated(object? sender, UserViewModel? userData)
@@ -228,7 +175,7 @@ namespace CloudLib.Client.WinUI.ViewModels
         {
             if (IsLoggedIn)
             {
-                //NavigationService.Navigate<SettingsPage>();
+                NavigationService.Navigate<SettingsPage>();
             }
             else
             {
@@ -250,11 +197,12 @@ namespace CloudLib.Client.WinUI.ViewModels
             }
             else
             {
-                var selectedItem = args.SelectedItemContainer as NavigationViewItem;
-
-                if (selectedItem?.GetValue(NavHelper.NavigateToProperty) is Type pageType)
+                if (args.SelectedItemContainer is NavigationViewItem selectedNavItem)
                 {
-                    NavigationService.Navigate(pageType, null, args.RecommendedNavigationTransitionInfo);
+                    if (selectedNavItem?.GetValue(NavHelper.NavigateToProperty) is Type pageType)
+                    {
+                        NavigationService.Navigate(pageType, null, args.RecommendedNavigationTransitionInfo);
+                    }
                 }
             }
         }
@@ -270,7 +218,7 @@ namespace CloudLib.Client.WinUI.ViewModels
             //{
             //    Selected = _navigationView.SettingsItem as NavigationViewItem;
             //    return;
-            //}
+            //}-
 
             var selectedItem = GetSelectedItem(_navigationView!.MenuItems, e.SourcePageType);
             if (selectedItem != null)
@@ -289,7 +237,7 @@ namespace CloudLib.Client.WinUI.ViewModels
                 }
 
                 var selectedChild = GetSelectedItem(item.MenuItems, pageType);
-                if (selectedChild != null)
+                if (selectedChild is not null)
                 {
                     return selectedChild;
                 }

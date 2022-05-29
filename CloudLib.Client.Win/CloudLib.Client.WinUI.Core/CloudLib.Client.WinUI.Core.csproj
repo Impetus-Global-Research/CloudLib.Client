@@ -11,12 +11,13 @@
 		<RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
 		<RunAnalyzersDuringLiveAnalysis>True</RunAnalyzersDuringLiveAnalysis>
 		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
+		<SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Amazon.Extensions.CognitoAuthentication" Version="2.2.2" />
-		<PackageReference Include="AWSSDK.CognitoIdentity" Version="3.7.0.149" />
-		<PackageReference Include="Microsoft.Identity.Client" Version="4.43.1" />
+		<PackageReference Include="AWSSDK.CognitoIdentity" Version="3.7.0.158" />
+		<PackageReference Include="Microsoft.Identity.Client" Version="4.43.2" />
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
 	</ItemGroup>
